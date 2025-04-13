@@ -1,0 +1,120 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Outfit', sans-serif;
+}
+
+body {
+    width: 100%;
+    height: 100vh;
+    background-color: #0a172c;
+    color: #e3e8ef;
+}
+
+main {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.quote-container {
+    background: #262f3e url(img/bg-image-random-quote.png);
+    background-position: center;
+    background-size: cover;
+    padding: 30px 60px;
+    border-radius: 0.75rem;
+    margin-bottom: 20px;
+    text-align: center;
+    box-shadow: 447px 304px 151px 0px rgba(0, 0, 0, 0), 286px 195px 138px 0px rgba(0, 0, 0, 0.01),
+  161px 110px 117px 0px rgba(0, 0, 0, 0.05), 72px 49px 87px 0px rgba(0, 0, 0, 0.09),
+  18px 12px 48px 0px rgba(0, 0, 0, 0.1);
+}
+
+.quote-container h2 {
+    font-size: 1.2rem;
+    margin-bottom: 12px;
+}
+
+.tags {
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+    margin-bottom: 1rem;
+}
+
+.tag {
+    display: inline-block;
+    font-size: 0.75rem;
+    color: #AEB0FF;
+    border: 1px solid #AEB0FF;
+    padding: 2px 10px;
+    border-radius: 1rem;
+}
+
+.quote {
+    max-width: 400px;
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+    cursor: pointer;
+}
+
+.buttons {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+}
+
+button {
+    display: flex;
+    align-items: center;
+    background: #262f3e;
+    color: #e3e8ef;
+    font-size: 1rem;
+    padding: 12px 14px;
+    border: none;
+    border-radius: 10px;
+    box-shadow: 447px 304px 151px 0px rgba(0, 0, 0, 0), 286px 195px 138px 0px rgba(0, 0, 0, 0.01),
+    161px 110px 117px 0px rgba(0, 0, 0, 0.05), 72px 49px 87px 0px rgba(0, 0, 0, 0.09),
+    18px 12px 48px 0px rgba(0, 0, 0, 0.1);
+    gap: 8px;
+    cursor: pointer;
+}
+
+.copy-toast {
+    position: fixed;
+    top:-100px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #1c2433;
+    color: #AEB0FF;
+    padding: 10px 20px;
+    border-radius: 10px;
+    font-size: 0.9rem;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.4s ease, transform 0.4s ease;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    z-index: 999;
+    font-weight: 500;
+    letter-spacing: 0.3px;
+  }
+  
+  .copy-toast.show {
+    opacity: 1;
+    transform: translateX(-50%) translateY(10px);
+  }
+  
+  @media(max-width: 720px) {
+    main {
+        width: 90%;
+    }
+
+    .quote {
+        font-size: 1.25rem;
+    }
+  }
+
